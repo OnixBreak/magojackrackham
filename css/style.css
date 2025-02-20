@@ -1,0 +1,211 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --columns: repeat(3,1fr);
+    --rows: 1fr;
+    --facebook: #3b5999;
+    --instagram: #e4405f;
+    --whatsapp: #25D366;
+    --tiktok: #000;
+}
+
+@font-face {
+    font-family:'montserrat' ;
+    src: url('../fonts/Montserrat-VariableFont_wght.ttf');
+
+}
+@font-face {
+    font-family: 'geolgica';
+    src: url(../fonts/Geologica.ttf);
+}
+
+
+body{
+    background-color: #000;
+    color: #FFF;
+    font-family: montserrat;
+}
+h3{
+    margin-top: 1em;
+    text-align: center;
+}
+
+.title-img img {
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+
+}
+
+
+.descript{
+    text-align: center;
+    background-color: #FFF;
+    color: #000;
+    margin-top: 19em;
+    justify-content: center;
+    box-shadow: 0px -50px 50px -40px rgba(0, 0, 0, 0.7);
+
+}
+.descript img{
+    width: 70%;
+    
+}
+
+.title{
+    padding: 0.5em;
+    font-family: montserrat;
+    font-size: 2.5rem;
+    font-style: bold;
+}
+.text-center{
+    text-align: center;
+    display: block;
+    text-align: center;
+    font-family: montserrat;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.text-descript{
+    padding: 2em;
+    display: block;
+    text-align: justify;
+    font-family: montserrat;
+
+}
+.cards {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 50px;
+    color: #000;
+}
+.cards a{
+    text-decoration: none;
+    color: #FFF;
+}
+.text-cards{
+    text-indent: 5px;
+    list-style: none;
+}
+
+.btn-cards{
+    width:100%;
+    height: 3em;
+    margin-top: 1em;
+    color: #FFF;
+    background-color: #d4042a;
+    border: none;
+    font-size: 1em;
+    transition: all 350ms;
+    cursor: pointer;
+}
+.btn-cards:hover{
+    background-color: #a90321;
+    font-size: 1.2em;
+}
+
+.card {
+    font-family: 'Montserrat', sans-serif;
+    margin: 3em auto; /* Centrar la tarjeta */
+    width: 25em;
+    padding: 1.5em;
+    background: rgba(255, 255, 255, 0.9);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.753);
+}
+
+.card img {
+    width: 100%; /* Imagen adaptable */
+    
+}
+
+.card p {
+    text-align: center;
+    font-size: 1em;
+    color: #333;
+    margin-top: 0.5em;
+}
+.nota-title{
+    color: #FFF;
+    font-size: 1.1em;
+}
+.nota-info{
+    color: #FFF;
+    font-style: italic;
+    list-style:circle;
+}
+
+.rs{
+    background-color: #a90321;
+}
+.rscontainer{
+    display: flex;
+    height: 10vh;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+.rscontainer ul li{
+    display: inline-block;
+    margin: 0 5px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+
+.rscontainer ul li a{
+    display: block;
+    padding: 0px 10px;
+    background-color: #333;
+    color: #FFF;
+    line-height: 50px;
+    font-size: 18px;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, .2);
+    transition: all 350ms;
+
+}
+.rscontainer ul:hover a{
+    filter: blur(2px);
+}
+.rscontainer ul li a:hover{
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, .2);
+    filter: none;
+
+}
+
+.rscontainer ul li .facebook:hover{
+    background-color: var(--facebook);
+}
+
+.rscontainer ul li .instagram:hover{
+    background-color: var(--instagram);
+}
+
+.rscontainer ul li .whatsapp:hover{
+    background-color: var(--whatsapp);
+}
+
+.rscontainer ul li .tiktok:hover{
+    background-color: var(--tiktok);
+    border: 1px solid #FFF;
+}
