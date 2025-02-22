@@ -23,6 +23,10 @@
     font-family: 'geolgica';
     src: url(../fonts/Geologica.ttf);
 }
+@font-face {
+    font-family: 'aston';
+    src: url(../fonts/Aston.ttf);
+}
 
 
 body{
@@ -52,19 +56,27 @@ h3{
     text-align: center;
     background-color: #FFF;
     color: #000;
+    justify-content: center;
+
+}
+.img_descript{
+    text-align: center;
+    background-color: #FFF;
+    color: #000;
     margin-top: 19em;
     justify-content: center;
     box-shadow: 0px -50px 50px -40px rgba(0, 0, 0, 0.7);
-
-}
-.descript img{
-    width: 70%;
     
 }
 
+.img_descript img{
+    width: 70%;
+}
+
+
 .title{
     padding: 0.5em;
-    font-family: montserrat;
+    font-family: aston;
     font-size: 2.5rem;
     font-style: bold;
 }
@@ -143,14 +155,21 @@ h3{
     color: #333;
     margin-top: 0.5em;
 }
+.nota{
+    background-color: rgba(0, 0, 0, 0.9);
+}
 .nota-title{
     color: #FFF;
     font-size: 1.1em;
 }
 .nota-info{
+    
     color: #FFF;
     font-style: italic;
     list-style:circle;
+    text-align: justify;
+    padding-left: 3em;
+    padding-bottom: 1em;
 }
 
 .rs{
@@ -208,4 +227,135 @@ h3{
 .rscontainer ul li .tiktok:hover{
     background-color: var(--tiktok);
     border: 1px solid #FFF;
+}
+
+.container-grid{
+    display: grid;
+    grid-template-rows:50em 15em 120 10em 10em;
+    grid-template-areas:
+    "img_descriptgrid"
+    "descript"
+    "cards"
+    "notes"
+    "footer";
+    
+}
+.img_descript_grid{
+    display:grid;
+    grid-area: img_descriptgrid;
+}
+.descript-grid{
+    display: grid;
+    grid-area: descript;
+    
+
+}
+.cards-grid{
+    grid-area: cards;
+
+}
+.notes-grid{
+    grid-area: notes;
+    text-align: center;
+    
+}
+
+.footer-grid{
+    grid-area: footer;
+}
+
+/*Media querys*/
+
+/*Tablet*/
+@media( min-width: 600px){
+    .container-grid{
+        grid-template-rows:60em 15em 160em 10em 10em;
+    }
+
+}
+/*Laptop pequeña*/
+@media( min-width: 780px){
+    .container-grid{
+        grid-template-areas:
+    "img_descriptgrid descript"
+    "cards cards"
+    "notes notes"
+    "footer footer";
+
+        grid-template-rows:55em 165em 10em 10em;
+    }
+
+    .descript{
+        margin-top: 19em;
+        padding: 5em;
+    }
+    .title{
+        font-size: 1.8em;
+    }
+    .img_descript img{
+        width: 80%;
+    }
+    .text-center{
+        font-size: 1.5em;
+
+    }
+    .text-descript{
+        font-size: 1.3em;
+
+    }
+
+}
+/*pantalla grande*/
+
+@media( min-width: 820px){
+
+    .container-grid{
+        grid-template-areas:
+    "img_descriptgrid descript"
+    "cards cards"
+    "notes notes"
+    "footer footer";
+
+        grid-template-rows:60em 120em 7em 10em;
+    }
+    .text-center{
+        font-size: 2em;
+    }
+    title{
+        font-size: 2.5em;
+    }
+    .img_descript img{
+        width: 80%;
+    }
+    
+
+}
+
+@media(min-width: 1217px){
+    .container-grid{
+        grid-template-rows:56em 60em 8em 5em;
+    }
+    .img_descript img{
+        width: 45%;
+    }
+    .img_descript{
+        margin-top: 30em;
+    }
+    .descript{
+        margin-top: 30em;
+    }
+
+}
+
+@media(min-width: 1280px){
+    .container-grid{
+        grid-template-rows:75em 60em 8em 5em;
+    }
+    .title{
+        font-size: 3em;
+    }
+    .descript{
+        padding: 12em;
+    }
+
 }
